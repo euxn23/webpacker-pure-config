@@ -1,0 +1,34 @@
+{
+  "name": "webpacker-pure-config",
+  "version": "0.1.0",
+  "description": "Pure webpack way config for webpacker and rails.",
+  "main": "index.js",
+  "scripts": {
+    "fmt": "prettier --write \"./**/*.js\"",
+    "test": "prettier --list-different \"./**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euxn23/webpacker-pure-config.git"
+  },
+  "keywords": [
+    "webpacker",
+    "webpack",
+    "webpack.config"
+  ],
+  "author": "euxn23",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/euxn23/webpacker-pure-config/issues"
+  },
+  "homepage": "https://github.com/euxn23/webpacker-pure-config#readme",
+  "devDependencies": {
+    "prettier": "^1.12.1",
+    "prettier-cli": "^0.1.0",
+    "webpack": "^4.8.3"
+  },
+  "dependencies": {
+    "readdir-recursively-sync": "^0.2.0",
+    "webpack-manifest-plugin": "^2.0.2"
+  }
+}
