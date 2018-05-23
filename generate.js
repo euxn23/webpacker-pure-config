@@ -1,10 +1,8 @@
 const { resolve, relative, dirname, basename, extname } = require('path')
-const { readdirRecursivelySyncFlatten } = require('readdir-recursively-sync')
+const { generateEntry } = require('webpacker-entry')
 const webpack = require('webpack')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-
-const { mapPathArrayToEntryHash } = require('./utils')
 
 module.exports = function generate(options = {}) {
   const baseDir = options.baseDir || resolve('./app/javascript/packs')
@@ -20,11 +18,7 @@ module.exports = function generate(options = {}) {
   return {
     mode: 'development',
     devtool: 'cheap-module-source-map',
-    entry: mapPathArrayToEntryHash(
-      readdirRecursivelySyncFlatten(baseDir),
-      baseDir,
-      extensions
-    ),
+    entry: generateEntry(baseDir, extensions),
     output: {
       filename: '[name]-[chunkhash].js',
       chunkFilename: '[name]-[chunkhash].chunk.js',
