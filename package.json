@@ -1,6 +1,6 @@
 {
   "name": "webpacker-pure-config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Pure webpack way config for webpacker and rails.",
   "main": "index.js",
   "scripts": {
@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/euxn23/webpacker-pure-config#readme",
   "devDependencies": {
-    "prettier": "^1.12.1",
+    "prettier": "^1.18.2",
     "prettier-cli": "^0.1.0",
-    "webpack": "^4.8.3"
+    "webpack": "^4.39.3"
   },
   "dependencies": {
-    "webpack-manifest-plugin": "^2.0.2",
-    "webpacker-entry": "^0.1.0"
+    "webpack-manifest-plugin": "2.0.4",
+    "webpacker-entry": "0.1.0"
   }
 }
