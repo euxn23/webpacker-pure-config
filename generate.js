@@ -2,7 +2,7 @@ const { resolve, relative, dirname, basename, extname } = require('path')
 const { generateEntry } = require('webpacker-entry')
 const webpack = require('webpack')
 const ManifestPlugin = require('webpack-manifest-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 module.exports = function generate(options = {}) {
   const baseDir = options.baseDir || resolve('./app/javascript/packs')
@@ -34,7 +34,7 @@ module.exports = function generate(options = {}) {
       new ManifestPlugin({ publicPath: '/packs/', writeToFileEmit: true })
     ],
     optimization: {
-      minimizer: [new UglifyJSPlugin()]
+      minimizer: [new TerserWebpackPlugin()]
     },
     resolve: {
       extensions
